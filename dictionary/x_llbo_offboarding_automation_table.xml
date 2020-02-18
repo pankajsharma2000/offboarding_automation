@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="x_llbo_cb_automati_cb_automation_table" label="offboarding_automation Table" max_length="40" name="x_llbo_offboarding_automation_table" type="collection"/>
+</database>
