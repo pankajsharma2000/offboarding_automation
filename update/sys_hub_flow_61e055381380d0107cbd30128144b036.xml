@@ -1,0 +1,1336 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation>log steps of termination</annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Provide:
+user_id: The user ID of the user being terminated. 
+termination_step_type: What's being updated? (Example: Phone Number). Preferably column name that you updated.
+termination_steps_taken: What got updated? For example: Value of phone number of employee being terminated.</description>
+        <internal_name>log_termination_steps</internal_name>
+        <label_cache>[{"name":"dccf196a-5a3e-4bbd-9e80-30aad8b76e48.Record.user_name","label":"1➛User Record➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"dccf196a-5a3e-4bbd-9e80-30aad8b76e48.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"dccf196a-5a3e-4bbd-9e80-30aad8b76e48.Record","label":"1➛User Record","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference"},{"name":"subflow.termination_step_taken","label":"Input➛Termination Step Taken","reference":"","reference_display":"","type":"string","base_type":"string","column_name":""},{"name":"subflow.termination_step_type2","label":"Input➛Termination Step Type","reference":"","reference_display":"","type":"string","base_type":"string","column_name":""},{"name":"subflow.user_id","label":"Input➛User ID","reference":"","reference_display":"","type":"string","base_type":"string","column_name":""},{"name":"8d7bbf53-0b76-42ea-86cc-558e5f3ebdc1.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string"},{"name":"8d7bbf53-0b76-42ea-86cc-558e5f3ebdc1.status","label":"1➛Status","reference_display":"Status","type":"choice","base_type":"choice"},{"name":"8d7bbf53-0b76-42ea-86cc-558e5f3ebdc1.table_name","label":"1➛Terminated Employees Table","reference":"x_llbo_offboarding_terminated_employees","reference_display":"Terminated Employees","type":"table_name","base_type":"table_name"},{"name":"8d7bbf53-0b76-42ea-86cc-558e5f3ebdc1.record","label":"1➛Terminated Employees Record","reference":"x_llbo_offboarding_terminated_employees","reference_display":"Terminated Employees","type":"reference","base_type":"reference"}]</label_cache>
+        <latest_snapshot>c1aab4cd130814107cbd30128144b07f</latest_snapshot>
+        <master_snapshot>76680a3c13c4d0107cbd30128144b08d</master_snapshot>
+        <name>log_termination_steps</name>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 20:58:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>61e055381380d0107cbd30128144b036</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>log_termination_steps</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="offboarding_automation" source="x_llbo_offboarding">5f2c340b137244108907dd828144b095</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name>sys_hub_flow_61e055381380d0107cbd30128144b036</sys_update_name>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:07</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_variable_value action="delete_multiple" query="document_key=61e055381380d0107cbd30128144b036"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=61e055381380d0107cbd30128144b036^sys_idNOT IN08d255f81380d0107cbd30128144b0e1,69c39d3c1380d0107cbd30128144b0eb"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create or Update Record">ab575ae253b3230034c6ddeeff7b12f1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>ab575ae253b3230034c6ddeeff7b12f1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="log_termination_steps">61e055381380d0107cbd30128144b036</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:06:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>08d255f81380d0107cbd30128144b0e1</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 13:59:46</sys_updated_on>
+        <ui_id>8d7bbf53-0b76-42ea-86cc-558e5f3ebdc1</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=08d255f81380d0107cbd30128144b0e1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>08d255f81380d0107cbd30128144b0e1</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:06:53</sys_created_on>
+        <sys_id>c0d255f81380d0107cbd30128144b0e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:06:53</sys_updated_on>
+        <value>x_llbo_offboarding_terminated_employees</value>
+        <variable display_value="">ec571ae253b3230034c6ddeeff7b127d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>08d255f81380d0107cbd30128144b0e1</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:04</sys_created_on>
+        <sys_id>fa680a3c13c4d0107cbd30128144b060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:04</sys_updated_on>
+        <value>x_llbo_offboarding_terminated_employees</value>
+        <variable display_value="">27575ae253b3230034c6ddeeff7b12f4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=08d255f81380d0107cbd30128144b0e1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>08d255f81380d0107cbd30128144b0e1</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:04</sys_created_on>
+        <sys_id>b6680a3c13c4d0107cbd30128144b060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value>user_id={{subflow.user_id}}^termination_step_type={{subflow.termination_step_type2}}^termination_steps_taken={{subflow.termination_step_taken}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>08d255f81380d0107cbd30128144b0e1</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:06:53</sys_created_on>
+        <sys_id>08d255f81380d0107cbd30128144b0e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:06:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_e057d2e253b3230034c6ddeeff7b1261</table>
+        <value>user_id={{subflow.user_id}}^termination_step_type={{subflow.termination_step_type2}}^termination_steps_taken={{subflow.termination_step_taken}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>08d255f81380d0107cbd30128144b0e1</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:04</sys_created_on>
+        <sys_id>7a680a3c13c4d0107cbd30128144b060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>08d255f81380d0107cbd30128144b0e1</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:06:53</sys_created_on>
+        <sys_id>40d255f81380d0107cbd30128144b0e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:06:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_e057d2e253b3230034c6ddeeff7b1261</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
+        <display_text/>
+        <flow display_value="log_termination_steps">61e055381380d0107cbd30128144b036</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:11:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>69c39d3c1380d0107cbd30128144b0eb</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 13:59:46</sys_updated_on>
+        <ui_id>2acc9bf9-7398-4d1c-a181-2655a002322a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=69c39d3c1380d0107cbd30128144b0eb"/>
+    <sys_element_mapping action="delete_multiple" query="id=69c39d3c1380d0107cbd30128144b0eb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>69c39d3c1380d0107cbd30128144b0eb</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:11:04</sys_created_on>
+        <sys_id>edc39d3c1380d0107cbd30128144b0ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:11:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_0e0ae8c2531003003bf1d9109ec587c8</table>
+        <value>{"user_id":"{{subflow.user_id}}", "termination_step_type":"{{subflow.termination_step_type2}}" , "termination_steps_taken":"{{subflow.termination_step_taken}}"}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>69c39d3c1380d0107cbd30128144b0eb</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:04</sys_created_on>
+        <sys_id>b6680a3c13c4d0107cbd30128144b062</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>{"user_id":"{{subflow.user_id}}", "termination_step_type":"{{subflow.termination_step_type2}}" , "termination_steps_taken":"{{subflow.termination_step_taken}}"}</value>
+    </sys_element_mapping>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=61e055381380d0107cbd30128144b036^sys_idNOT IN2de055381380d0107cbd30128144b038"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>61e055381380d0107cbd30128144b036</id>
+        <name>log_termination_steps</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 20:58:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2de055381380d0107cbd30128144b038</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 20:58:30</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=61e055381380d0107cbd30128144b036^sys_idNOT IN9862d9b81380d0107cbd30128144b073,c86211bc1300d0107cbd30128144b058,dc62d9b81380d0107cbd30128144b078"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>termination_step_taken</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Termination Step Taken</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="log_termination_steps">61e055381380d0107cbd30128144b036</model>
+        <model_id>61e055381380d0107cbd30128144b036</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_61e055381380d0107cbd30128144b036</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:04:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9862d9b81380d0107cbd30128144b073</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:06:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>User ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="log_termination_steps">61e055381380d0107cbd30128144b036</model>
+        <model_id>61e055381380d0107cbd30128144b036</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_61e055381380d0107cbd30128144b036</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:04:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c86211bc1300d0107cbd30128144b058</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:04:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>termination_step_type2</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Termination Step Type</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="log_termination_steps">61e055381380d0107cbd30128144b036</model>
+        <model_id>61e055381380d0107cbd30128144b036</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_61e055381380d0107cbd30128144b036</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:04:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>dc62d9b81380d0107cbd30128144b078</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:06:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=61e055381380d0107cbd30128144b036^sys_idNOT IN08d255f81380d0107cbd30128144b0e1,69c39d3c1380d0107cbd30128144b0eb"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create or Update Record">ab575ae253b3230034c6ddeeff7b12f1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>ab575ae253b3230034c6ddeeff7b12f1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="log_termination_steps">61e055381380d0107cbd30128144b036</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:06:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>08d255f81380d0107cbd30128144b0e1</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 13:59:46</sys_updated_on>
+        <ui_id>8d7bbf53-0b76-42ea-86cc-558e5f3ebdc1</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=08d255f81380d0107cbd30128144b0e1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>08d255f81380d0107cbd30128144b0e1</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:06:53</sys_created_on>
+        <sys_id>c0d255f81380d0107cbd30128144b0e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:06:53</sys_updated_on>
+        <value>x_llbo_offboarding_terminated_employees</value>
+        <variable display_value="">ec571ae253b3230034c6ddeeff7b127d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>08d255f81380d0107cbd30128144b0e1</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:04</sys_created_on>
+        <sys_id>fa680a3c13c4d0107cbd30128144b060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:04</sys_updated_on>
+        <value>x_llbo_offboarding_terminated_employees</value>
+        <variable display_value="">27575ae253b3230034c6ddeeff7b12f4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=08d255f81380d0107cbd30128144b0e1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>08d255f81380d0107cbd30128144b0e1</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:04</sys_created_on>
+        <sys_id>b6680a3c13c4d0107cbd30128144b060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value>user_id={{subflow.user_id}}^termination_step_type={{subflow.termination_step_type2}}^termination_steps_taken={{subflow.termination_step_taken}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>08d255f81380d0107cbd30128144b0e1</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:06:53</sys_created_on>
+        <sys_id>08d255f81380d0107cbd30128144b0e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:06:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_e057d2e253b3230034c6ddeeff7b1261</table>
+        <value>user_id={{subflow.user_id}}^termination_step_type={{subflow.termination_step_type2}}^termination_steps_taken={{subflow.termination_step_taken}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>08d255f81380d0107cbd30128144b0e1</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:04</sys_created_on>
+        <sys_id>7a680a3c13c4d0107cbd30128144b060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>08d255f81380d0107cbd30128144b0e1</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:06:53</sys_created_on>
+        <sys_id>40d255f81380d0107cbd30128144b0e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:06:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_e057d2e253b3230034c6ddeeff7b1261</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
+        <display_text/>
+        <flow display_value="log_termination_steps">61e055381380d0107cbd30128144b036</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:11:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>69c39d3c1380d0107cbd30128144b0eb</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 13:59:46</sys_updated_on>
+        <ui_id>2acc9bf9-7398-4d1c-a181-2655a002322a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=69c39d3c1380d0107cbd30128144b0eb"/>
+    <sys_element_mapping action="delete_multiple" query="id=69c39d3c1380d0107cbd30128144b0eb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>69c39d3c1380d0107cbd30128144b0eb</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:11:04</sys_created_on>
+        <sys_id>edc39d3c1380d0107cbd30128144b0ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:11:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_0e0ae8c2531003003bf1d9109ec587c8</table>
+        <value>{"user_id":"{{subflow.user_id}}", "termination_step_type":"{{subflow.termination_step_type2}}" , "termination_steps_taken":"{{subflow.termination_step_taken}}"}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>69c39d3c1380d0107cbd30128144b0eb</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:04</sys_created_on>
+        <sys_id>b6680a3c13c4d0107cbd30128144b062</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>{"user_id":"{{subflow.user_id}}", "termination_step_type":"{{subflow.termination_step_type2}}" , "termination_steps_taken":"{{subflow.termination_step_taken}}"}</value>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_61e055381380d0107cbd30128144b036^sys_idNOT IN1062d9b81380d0107cbd30128144b078,1c62d9b81380d0107cbd30128144b089,5462d9b81380d0107cbd30128144b072"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>termination_step_taken</element>
+        <help/>
+        <hint/>
+        <label>Termination Step Taken</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_61e055381380d0107cbd30128144b036</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:04:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1062d9b81380d0107cbd30128144b078</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Termination Step Taken</sys_name>
+        <sys_package display_value="offboarding_automation" source="x_llbo_offboarding">5f2c340b137244108907dd828144b095</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_61e055381380d0107cbd30128144b036_termination_step_taken_en</sys_update_name>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:04:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>termination_step_type2</element>
+        <help/>
+        <hint/>
+        <label>Termination Step Type</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_61e055381380d0107cbd30128144b036</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:04:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1c62d9b81380d0107cbd30128144b089</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Termination Step Type</sys_name>
+        <sys_package display_value="offboarding_automation" source="x_llbo_offboarding">5f2c340b137244108907dd828144b095</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_61e055381380d0107cbd30128144b036_termination_step_type2_en</sys_update_name>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:04:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user_id</element>
+        <help/>
+        <hint/>
+        <label>User ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_61e055381380d0107cbd30128144b036</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 21:04:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5462d9b81380d0107cbd30128144b072</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User ID</sys_name>
+        <sys_package display_value="offboarding_automation" source="x_llbo_offboarding">5f2c340b137244108907dd828144b095</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_61e055381380d0107cbd30128144b036_user_id_en</sys_update_name>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 21:04:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=61e055381380d0107cbd30128144b036^sys_idNOT INdb680a3c13c4d0107cbd30128144b0ea"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"db680a3c13c4d0107cbd30128144b0ea","name":"plan"}}</plan>
+        <plan_id display_value="log_termination_steps">61e055381380d0107cbd30128144b036</plan_id>
+        <snapshot>c1aab4cd130814107cbd30128144b07f</snapshot>
+        <sys_class_name>sys_flow_subflow_plan</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>db680a3c13c4d0107cbd30128144b0ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation>log steps of termination</annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Provide:
+user_id: The user ID of the user being terminated. 
+termination_step_type: What's being updated? (Example: Phone Number). Preferably column name that you updated.
+termination_steps_taken: What got updated? For example: Value of phone number of employee being terminated.</description>
+        <internal_name>log_termination_steps</internal_name>
+        <label_cache>[{"name":"dccf196a-5a3e-4bbd-9e80-30aad8b76e48.Record.user_name","label":"1➛User Record➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"dccf196a-5a3e-4bbd-9e80-30aad8b76e48.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"dccf196a-5a3e-4bbd-9e80-30aad8b76e48.Record","label":"1➛User Record","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference"},{"name":"subflow.termination_step_taken","label":"Input➛Termination Step Taken","reference":"","reference_display":"","type":"string","base_type":"string","column_name":""},{"name":"subflow.termination_step_type2","label":"Input➛Termination Step Type","reference":"","reference_display":"","type":"string","base_type":"string","column_name":""},{"name":"subflow.user_id","label":"Input➛User ID","reference":"","reference_display":"","type":"string","base_type":"string","column_name":""},{"name":"8d7bbf53-0b76-42ea-86cc-558e5f3ebdc1.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string"},{"name":"8d7bbf53-0b76-42ea-86cc-558e5f3ebdc1.status","label":"1➛Status","reference_display":"Status","type":"choice","base_type":"choice"},{"name":"8d7bbf53-0b76-42ea-86cc-558e5f3ebdc1.table_name","label":"1➛Terminated Employees Table","reference":"x_llbo_offboarding_terminated_employees","reference_display":"Terminated Employees","type":"table_name","base_type":"table_name"},{"name":"8d7bbf53-0b76-42ea-86cc-558e5f3ebdc1.record","label":"1➛Terminated Employees Record","reference":"x_llbo_offboarding_terminated_employees","reference_display":"Terminated Employees","type":"reference","base_type":"reference"}]</label_cache>
+        <master>true</master>
+        <name>log_termination_steps</name>
+        <outputs/>
+        <parent_flow display_value="log_termination_steps">61e055381380d0107cbd30128144b036</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>76680a3c13c4d0107cbd30128144b08d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:05</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=76680a3c13c4d0107cbd30128144b08d"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=76680a3c13c4d0107cbd30128144b08d^sys_idNOT IN03680a3c13c4d0107cbd30128144b0d2,8b680a3c13c4d0107cbd30128144b0ce"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <comment/>
+        <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
+        <display_text/>
+        <flow display_value="log_termination_steps">76680a3c13c4d0107cbd30128144b08d</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>03680a3c13c4d0107cbd30128144b0d2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <ui_id>2acc9bf9-7398-4d1c-a181-2655a002322a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=03680a3c13c4d0107cbd30128144b0d2"/>
+    <sys_element_mapping action="delete_multiple" query="id=03680a3c13c4d0107cbd30128144b0d2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>03680a3c13c4d0107cbd30128144b0d2</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_id>cf680a3c13c4d0107cbd30128144b0d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>{"user_id":"{{subflow.user_id}}", "termination_step_type":"{{subflow.termination_step_type2}}" , "termination_steps_taken":"{{subflow.termination_step_taken}}"}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create or Update Record">ab575ae253b3230034c6ddeeff7b12f1</action_type>
+        <action_type_parent display_value="Create or Update Record">e057d2e253b3230034c6ddeeff7b1261</action_type_parent>
+        <comment/>
+        <compiled_snapshot>ab575ae253b3230034c6ddeeff7b12f1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="log_termination_steps">76680a3c13c4d0107cbd30128144b08d</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8b680a3c13c4d0107cbd30128144b0ce</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <ui_id>8d7bbf53-0b76-42ea-86cc-558e5f3ebdc1</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8b680a3c13c4d0107cbd30128144b0ce"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8b680a3c13c4d0107cbd30128144b0ce</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_id>83680a3c13c4d0107cbd30128144b0d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <value>x_llbo_offboarding_terminated_employees</value>
+        <variable display_value="">27575ae253b3230034c6ddeeff7b12f4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8b680a3c13c4d0107cbd30128144b0ce"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>8b680a3c13c4d0107cbd30128144b0ce</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_id>4f680a3c13c4d0107cbd30128144b0cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value>user_id={{subflow.user_id}}^termination_step_type={{subflow.termination_step_type2}}^termination_steps_taken={{subflow.termination_step_taken}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>8b680a3c13c4d0107cbd30128144b0ce</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_id>03680a3c13c4d0107cbd30128144b0d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=76680a3c13c4d0107cbd30128144b08d^sys_idNOT IN32680a3c13c4d0107cbd30128144b08e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>76680a3c13c4d0107cbd30128144b08d</id>
+        <name>log_termination_steps</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>32680a3c13c4d0107cbd30128144b08e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:05</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=76680a3c13c4d0107cbd30128144b08d^sys_idNOT IN36680a3c13c4d0107cbd30128144b08f,43680a3c13c4d0107cbd30128144b0c2,8f680a3c13c4d0107cbd30128144b0ba"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>User ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="log_termination_steps">76680a3c13c4d0107cbd30128144b08d</model>
+        <model_id>76680a3c13c4d0107cbd30128144b08d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_76680a3c13c4d0107cbd30128144b08d</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>36680a3c13c4d0107cbd30128144b08f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>termination_step_taken</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Termination Step Taken</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="log_termination_steps">76680a3c13c4d0107cbd30128144b08d</model>
+        <model_id>76680a3c13c4d0107cbd30128144b08d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_76680a3c13c4d0107cbd30128144b08d</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>43680a3c13c4d0107cbd30128144b0c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>termination_step_type2</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Termination Step Type</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="log_termination_steps">76680a3c13c4d0107cbd30128144b08d</model>
+        <model_id>76680a3c13c4d0107cbd30128144b08d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_76680a3c13c4d0107cbd30128144b08d</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8f680a3c13c4d0107cbd30128144b0ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=76680a3c13c4d0107cbd30128144b08d^sys_idNOT IN03680a3c13c4d0107cbd30128144b0d2,8b680a3c13c4d0107cbd30128144b0ce"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <comment/>
+        <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
+        <display_text/>
+        <flow display_value="log_termination_steps">76680a3c13c4d0107cbd30128144b08d</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>03680a3c13c4d0107cbd30128144b0d2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <ui_id>2acc9bf9-7398-4d1c-a181-2655a002322a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=03680a3c13c4d0107cbd30128144b0d2"/>
+    <sys_element_mapping action="delete_multiple" query="id=03680a3c13c4d0107cbd30128144b0d2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>03680a3c13c4d0107cbd30128144b0d2</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_id>cf680a3c13c4d0107cbd30128144b0d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>{"user_id":"{{subflow.user_id}}", "termination_step_type":"{{subflow.termination_step_type2}}" , "termination_steps_taken":"{{subflow.termination_step_taken}}"}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create or Update Record">ab575ae253b3230034c6ddeeff7b12f1</action_type>
+        <action_type_parent display_value="Create or Update Record">e057d2e253b3230034c6ddeeff7b1261</action_type_parent>
+        <comment/>
+        <compiled_snapshot>ab575ae253b3230034c6ddeeff7b12f1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="log_termination_steps">76680a3c13c4d0107cbd30128144b08d</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8b680a3c13c4d0107cbd30128144b0ce</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <ui_id>8d7bbf53-0b76-42ea-86cc-558e5f3ebdc1</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8b680a3c13c4d0107cbd30128144b0ce"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8b680a3c13c4d0107cbd30128144b0ce</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_id>83680a3c13c4d0107cbd30128144b0d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <value>x_llbo_offboarding_terminated_employees</value>
+        <variable display_value="">27575ae253b3230034c6ddeeff7b12f4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8b680a3c13c4d0107cbd30128144b0ce"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>8b680a3c13c4d0107cbd30128144b0ce</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_id>4f680a3c13c4d0107cbd30128144b0cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value>user_id={{subflow.user_id}}^termination_step_type={{subflow.termination_step_type2}}^termination_steps_taken={{subflow.termination_step_taken}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>8b680a3c13c4d0107cbd30128144b0ce</id>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_id>03680a3c13c4d0107cbd30128144b0d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_76680a3c13c4d0107cbd30128144b08d^sys_idNOT IN4b680a3c13c4d0107cbd30128144b094,8f680a3c13c4d0107cbd30128144b0bf,c3680a3c13c4d0107cbd30128144b0c7"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user_id</element>
+        <help/>
+        <hint/>
+        <label>User ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_76680a3c13c4d0107cbd30128144b08d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4b680a3c13c4d0107cbd30128144b094</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User ID</sys_name>
+        <sys_package display_value="offboarding_automation" source="x_llbo_offboarding">5f2c340b137244108907dd828144b095</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_76680a3c13c4d0107cbd30128144b08d_user_id_en</sys_update_name>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:05</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>termination_step_type2</element>
+        <help/>
+        <hint/>
+        <label>Termination Step Type</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_76680a3c13c4d0107cbd30128144b08d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8f680a3c13c4d0107cbd30128144b0bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Termination Step Type</sys_name>
+        <sys_package display_value="offboarding_automation" source="x_llbo_offboarding">5f2c340b137244108907dd828144b095</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_76680a3c13c4d0107cbd30128144b08d_termination_step_type2_en</sys_update_name>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>termination_step_taken</element>
+        <help/>
+        <hint/>
+        <label>Termination Step Taken</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_76680a3c13c4d0107cbd30128144b08d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-06 01:01:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c3680a3c13c4d0107cbd30128144b0c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Termination Step Taken</sys_name>
+        <sys_package display_value="offboarding_automation" source="x_llbo_offboarding">5f2c340b137244108907dd828144b095</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_76680a3c13c4d0107cbd30128144b08d_termination_step_taken_en</sys_update_name>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-06 01:01:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>

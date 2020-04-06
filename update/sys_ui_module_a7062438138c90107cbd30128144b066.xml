@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="offboarding_automation">cc3c3c4b137244108907dd828144b056</application>
+        <filter/>
+        <name>Terminated Employees</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_llbo_offboarding.user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>psharma</sys_created_by>
+        <sys_created_on>2020-04-05 17:51:19</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>a7062438138c90107cbd30128144b066</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Terminated Employees</sys_name>
+        <sys_package display_value="offboarding_automation" source="x_llbo_offboarding">5f2c340b137244108907dd828144b095</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="offboarding_automation">5f2c340b137244108907dd828144b095</sys_scope>
+        <sys_update_name>sys_ui_module_a7062438138c90107cbd30128144b066</sys_update_name>
+        <sys_updated_by>psharma</sys_updated_by>
+        <sys_updated_on>2020-04-05 17:51:19</sys_updated_on>
+        <table>x_llbo_offboarding_terminated_employees</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>

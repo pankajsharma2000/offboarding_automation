@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Terminated Employees" max_length="40" name="x_llbo_offboarding_terminated_employees" type="collection">
+        <element label="Termination Steps Taken" max_length="40" name="termination_steps_taken" type="string"/>
+        <element label="Termination Step Type" max_length="40" name="termination_step_type" type="string"/>
+        <element label="User ID" max_length="40" name="user_id" reference="sys_user" type="string"/>
+    </element>
+</database>
